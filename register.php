@@ -144,7 +144,7 @@ mysqli_close($conn);
       <input type="password" class="form-control" name="confirm_password" id="inputPassword" placeholder="Password">
     </div>
   </div>
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label for="inputAddress">Address</label>
     <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
   </div>
@@ -168,7 +168,7 @@ mysqli_close($conn);
       <label for="inputZip">Zip</label>
       <input type="text" class="form-control" id="inputZip">
     </div>
-  </div>
+  </div> -->
   <div class="form-group">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="gridCheck">
