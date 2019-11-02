@@ -7,16 +7,17 @@ $username_err = $password_err = $confirmpass_err ="";
 if($_SERVER['REQUEST_METHOD']=="POST")
 {
     // To check if username is empty
-    if(empty($_POST['username']))  //excluding trim in here
+    if(empty(trim($_POST['username'])))  
     {
         $username_err = "Username cannot be blank: ";
+        echo $username_err;
     }
     else
     {
         $sql = "SELECT id FROM users WHERE username = ?";
         $stmt = mysqli_prepare($conn,$sql);
         // bind the parameters to the stmt
-        if(stmt)
+        if($stmt)
         {
             $param_username = trim($_POST['username']);
             mysqli_stmt_bind_param($stmt,"s",$param_username);
@@ -29,6 +30,7 @@ if($_SERVER['REQUEST_METHOD']=="POST")
                 {
                     // this means the username is taken
                     $username_err = "The username already exists: ";
+                    echo $username_err;
                 }
                 else
                 {
@@ -41,9 +43,9 @@ if($_SERVER['REQUEST_METHOD']=="POST")
                 // not work
             }
         }
-        
+        mysqli_stmt_close($stmt);
     }
-    mysqli_stmt_close($stmt);
+   
 
 
 
@@ -51,30 +53,37 @@ if($_SERVER['REQUEST_METHOD']=="POST")
 if(empty(trim($_POST['password'])))
 {
     $password_err="password cannot be empty";
+    echo $password_err;
 }
-elseif((trim($_POST['password'])<5))
+elseif((strlen(trim($_POST['password'])))<5)
 {
     $password_err="password cannot be less than 5 chars";
+    echo $password_err;
+
 }
 else
 {
+  
     $password = trim($_POST['password']);
-}
+
 
 // check for confirm password field
-if(trim($_POST['password']!=trim($password)))
+if(trim($_POST['password'])!=$password)    // not working
 {
     $password_err = "passwords don't match";
+    echo $password_err;
+}
 } 
-if(empty($password_err)&&empty($username_err)&&empty($confirmpass_err))
+if(empty($password_err) && empty($username_err) && empty($confirmpass_err))
 {
     $sql = "INSERT INTO users (username,password) VALUES (?,?)";
     $stmt = mysqli_prepare($conn,$sql);
     if($stmt)
     {
         $param_username = $username;
-        $param_password = password_hash($password,PASSWORD_DEFAULT);
         mysqli_stmt_bind_param($stmt,'ss',$param_username,$param_password);
+        $param_password = password_hash($password,PASSWORD_DEFAULT);
+
 
         if(mysqli_stmt_execute($stmt))
         {
