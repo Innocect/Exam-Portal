@@ -65,15 +65,15 @@ else
 {
   
     $password = trim($_POST['password']);
-
-
+	$confirm_pass = trim($_POST['confirm_password']);
+}
 // check for confirm password field
-if(trim($_POST['password'])!=$password)    // not working
+if(trim($_POST['password'])!=$confirm_pass)    // not working
 {
     $password_err = "passwords don't match";
     echo $password_err;
 }
-} 
+ 
 if(empty($password_err) && empty($username_err) && empty($confirmpass_err))
 {
     $sql = "INSERT INTO users (username,password) VALUES (?,?)";
@@ -87,7 +87,7 @@ if(empty($password_err) && empty($username_err) && empty($confirmpass_err))
 
         if(mysqli_stmt_execute($stmt))
         {
-            header("location: login.php");
+           header("location: login.php");
         }
         else
         {
