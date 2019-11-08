@@ -14,3 +14,5 @@ error still persists
 pip install '(.whl file)mysqlclient ( cp37...amd64 for python 3.7 64bit and cp37...amd32 for python 3.7 32bit )'
 mysqlclient '.whl' is given inside Exam-portal 
 error still persists (TUM CH****E HO)
+
+
