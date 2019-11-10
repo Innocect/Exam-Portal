@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from . models import questions
+from . models import exam_questions
+from django.core.paginator import Paginator
 
 # Create your views here.
 
@@ -19,9 +20,11 @@ def otp(request):
 
 
 def test_page(request):
-    myquestion = questions.objects.all()
-    for q in myquestion:
-        print(q.question)
+    myquestion = exam_questions.objects.all()
+    paginator = Paginator(myquestion, 10)# Show 25 contacts per page
+
+    page = request.GET.get('page')
+    myquestion = paginator.get_page(page)
     return render(request, 'exam.html', {'questions': myquestion})
 
 

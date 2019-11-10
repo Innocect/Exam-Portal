@@ -55,7 +55,7 @@ ROOT_URLCONF = 'cet.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ BASE_DIR + '/template'],
+        'DIRS': [BASE_DIR + '/template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -89,7 +89,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
-        'POST' : '3306',
+        'POST': '3306',
     }
 }
 
