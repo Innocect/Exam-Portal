@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e472b72-e2ba-466e-8837-82416680c54c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../MHT-CET_Question Bank.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stes_test/migrations/0002_exam_questions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cet/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cet/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stes_test/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/stes_test/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stes_test/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/stes_test/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stes_test/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stes_test/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/exam.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/exam.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../loginsys.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../stes_test_questions.sql" beforeDir="false" />
-    </list>
+    <list default="true" id="5e472b72-e2ba-466e-8837-82416680c54c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/template/exam.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="154" column="25" selection-start-line="154" selection-start-column="25" selection-end-line="154" selection-end-column="25" />
+            <state relative-caret-position="520">
+              <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
               <folding>
                 <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -144,7 +133,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-15" />
     <option name="width" value="2190" />
     <option name="height" value="2095" />
@@ -250,9 +239,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="7" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24950495" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13861386" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -380,8 +370,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/exam.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="154" column="25" selection-start-line="154" selection-start-column="25" selection-end-line="154" selection-end-column="25" />
+        <state relative-caret-position="520">
+          <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
           <folding>
             <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
