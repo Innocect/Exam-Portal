@@ -19,9 +19,13 @@ def otp(request):
     return render(request, 'otp.html')
 
 
+def login(request):
+    return render(request, 'login.html')
+
+
 def test_page(request):
     myquestion = exam_questions.objects.all()
-    paginator = Paginator(myquestion, 10)# Show 25 contacts per page
+    paginator = Paginator(myquestion, 1)# Show 25 contacts per page
 
     page = request.GET.get('page')
     myquestion = paginator.get_page(page)
