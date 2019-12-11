@@ -22,11 +22,10 @@
 
         .container {
 
-            text-align: center;
+            text-align: left;
             position: absolute;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%,-50%);
+            top: 15%;
+            left: 5%;
             width: 100%;
         }
 
@@ -38,75 +37,42 @@
 
         .text1 {
             
-            color: black;
-            font-size: 60px;
-           /* font-weight: 700;*/
-            letter-spacing: 5px;
-            margin-bottom: 20px;
+            color: white;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 50px;
             position: relative;
-            animation: text 3s 1;
-           font-family: 'Black Ops One', cursive;
+            animation: text 3s steps(18);
+            border-right: 4px solid white;
+            font-family: 'Black Ops One', cursive;
+            width: 14ch;
 
 
-        }
-
-        .text2 {
-
-            color: black;
-            font-size: 30px;
-            animation: word 3s 1;
         }
 
         @keyframes text {
           0%{
-            color: white;
-            margin-bottom: -40px;
+            width: 0ch;
           }
 
-          30%{
-
-            letter-spacing: 25px;
-            margin-bottom: -50px;
-          }
-
-          85%{
-              
-            letter-spacing: 8px;
-            margin-bottom: -40px;
-
+          100%{
+            width: 14ch;
           }
         }
 
-        @keyframes word {
-          0%{
-            color: white;
-            margin-bottom: -40px;
-          }
-
-          30%{
-
-            letter-spacing: 25px;
-            margin-bottom: -50px;
-          }
-
-          85%{
-              
-            letter-spacing: 8px;
-            margin-bottom: -40px;
-
-          }
-        }
 
         .front {
 
-          text-align: center;
+          text-align: right;
+
+
         }
 
         .btn { 
 
           position: relative;
           margin-left: 47%;
-          margin-top: 10%;
+          margin-top: 3%;
         }
 
         .alert {
@@ -116,32 +82,42 @@
           margin-top: 10%;
         }
 
+        .container1 {
+
+         padding: 70px;
+         background-color: #5D585E;
+        }
+
+        .text2 {
+
+        color: #333333;
+        }
+
     </style>
 </head>
 <body>
 <nav class="navbar navbar-light bg-dark">
 
     <img src="{% static 'sinhgad.png' %}" width="100" height="80" class="d-inline-block align-top" alt="My image"/>
-<!--    <img src="sinhgad.png" width="100" height="80" class="d-inline-block align-top" alt="">-->
 
     <h3>Sinhgad Technical Education Society</h3>
 
     </nav>
+<div class="container1">
     <div class="front">
 <img src="{% static 'exam portal.png' %}" width="650" height="350" alt="My image"/>
 </div>
-<div class="container">
-<span class="text1">
-  WELCOME TO STES
-</span>
- <!--  <span class="text2">
-    Exam Portal
-  </span> -->
 </div>
+<div class="container">
+<span class="text1">WELCOME TO STES.
+</span>
+    <div class="text2">
+        <h4>Sinhgad Technical Education Society is providing a platform to<br> test your preparations.</h4>
+    </div>
 </div>
     <form action="/stes_test/register" method="get">
-        <button type="button" class="btn btn-success btn-lg text-center">Continue</button>
-<!--    <input type="submit" value="Next to fill up the form">-->
+        <button type="submit" class="btn btn-success btn-lg text-center mb-10">Continue</button>
+
     </form>
     <div class="alert alert-info" role="alert">
   Click Continue to start the Exam !
