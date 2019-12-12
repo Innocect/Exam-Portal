@@ -20,50 +20,72 @@
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" user-scalable="no" maximum-scale="1.0">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>Portal</title>
     <style type="text/css">
-        body {
-        	 
-        }
-      .card{
-
-            align-items: middle;
-            width: 80%;
-            
-        }
-
-        .my-custom-scrollbar {
-            position: relative;
-            height: 100%;
-            overflow: auto;
-        }
-
-        .button1{
-
-            float: left;
-            position: relative;
-            margin-left: 70px;
-            margin-bottom: 70px
-        }
-
-        .button2{
-
-            float: right;
-            position: relative;
-            margin-right: 70px
-            margin-bottom: 70px
-        }
         .navbar h3{
 
             color: #fff;
             font-family: Arial, Helvetica, sans-serif;
         }
-/*
-        .pagination{
 
-        			width: 100%;
-        }*/
+        .container {
+
+        }
+
+        .line {
+        border-bottom: 1px solid black;
+        position: relative;
+        }
+
+        .container3 {
+
+          margin-top: 100px;
+         px
+        }
+
+        .time {
+        margin-top: 10px;
+        position: relative;
+        float: right;
+        margin-right: 320px;
+        }
+
+        .btn1.btn-sm{
+            width: 30px;
+            height: 30px;
+            padding: 6px 0px;
+            border-radius: 15px;
+            font-size: 8px;
+            text-align: center;
+        }
+
+        .nxt_tab {
+        margin-top: 30px;
+          padding-bottom: 35px;
+          background-color: grey;
+          border-radius: 5px;
+        }
+
+        .btn.btn-warning {
+
+        float: right;
+        margin-top: 100px;
+        }
+
+        .btn.btn-success {
+
+        margin-top: 100px;
+        }
+
+        .profile {
+
+        position: absolute;
+        margin-top: 20px;
+        margin-left: 20px;
+        }
+
 
     </style>
 </head>
@@ -79,89 +101,117 @@
     <h3>Sinhgad Technical Education Society</h3>
     
     </nav>
+<div class="profile">
+    <h5><b>Welcome,</b> Utkarsh</h5>
+</div>
 
-    <div class="card" >
+<div class="time">
+    <h5>Time Remaining:</h5>
+    <div class="container3">
+                <div class="phy">
+                    <h5>Physics</h5>
+                      </div>
+                    <hr>
 
-      <div class="my-custom-scrollbar ">
+                    <div class="btn1">
+                <button type="button" class="btn btn-secondary btn-circle btn-sm">1</button>
+                        <button type="button" class="btn btn-secondary btn-circle btn-sm">1</button>
+                    </div>
+<br>
+                 <div class="chem">
+                     <h5>Chemistry</h5>
+                       </div>
+                    <hr>
+
+        <div class="btn1">
+                <button type="button" class="btn btn-secondary btn-circle btn-sm">1</button>
+            <button type="button" class="btn btn-secondary btn-circle btn-sm">1</button>
+                    </div>
+        <br>
+                 <div class="math">
+                     <h5>Mathematics</h5>
+                       </div>
+                    <hr>
+
+        <div class="btn1">
+                <button type="button" class="btn btn-secondary btn-circle btn-sm">1</button>
+            <button type="button" class="btn btn-secondary btn-circle btn-sm">1</button>
+                    </div>
+
+
+            </div>
+</div>
+
+
+   <div class="container">
         <div class="col-sm-11 py-5">
         {% for q in questions %}
         
           <div id="section1">
-            <h4>Question {{ q.question_id }}</h4>
-            <p>{{ q.question }}</p>
+            <h2>Question {{ q.question_id }}</h2>
+            <div class="line"></div>
+
+              <p><h4>{{ q.question }}</h4></p>
           </div>
+          
         <div class="form-check">
 
       <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
         <label class="form-check-label" for="exampleRadios1">
-          {{ q.option1 }}
+            <h4>{{ q.option1 }}</h4>
         </label>
       </div>
 
       <div class="form-check">
         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
         <label class="form-check-label" for="exampleRadios2">
-          {{ q.option2 }}
+            <h4>{{ q.option2 }}</h4>
         </label>
       </div>
 
       <div class="form-check">
         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
         <label class="form-check-label" for="exampleRadios3">
-          {{ q.option3 }}
+            <h4>{{ q.option3 }}</h4>
         </label>
       </div>
 
       <div class="form-check">
         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
         <label class="form-check-label" for="exampleRadios3">
-          {{ q.option4 }}
+            <h4>{{ q.option4 }}</h4>
         </label>
       </div>
-          <br>
-          <button type="button" class="btn btn-warning">Invalid</button>
-          <button style="margin-left: 100px" type="button" class="btn btn-success">Bookmark</button>
+
 
         {% endfor %}
+
+
+             <button type="button" class="btn btn-warning">Invalid</button>
+          <button type="button" class="btn btn-success">Bookmark</button>
         <br>
-        <br>
-
-
-
-          <!-- <div class="pagination"> -->
-              <!-- <span class="step-links"> -->
+                <div class="nxt_tab">
                   {% if questions.has_previous %}
-<!--                      <a href="?page=1">&laquo; first</a>-->
-<!--                <div class="button1">-->
+
                       <a class="button1" href="?page={{ questions.previous_page_number }}">
-                      	<button type="button" class="btn btn-primary">Previous</button>
-                      </a>
-<!--                </div>-->
-                  {% endif %}
-
-<!--                  <span class="current">-->
-<!--                      Page {{ questions.number }} of {{ questions.paginator.num_pages }}.-->
-<!--                  </span>-->
-
+  <button type="button" class="btn btn-primary float-left">Previous</button>
+</a>
+{% endif %}
                   {% if questions.has_next %}
-<!--                <div class="button2">-->
-                      <a class="button2" href="?page={{ questions.next_page_number }}">
-                      	<button type="button" class="btn btn-primary">Next</button>
-                      </a>
-<!--                  </div>-->
-<!--                      <a href="?page={{ questions.paginator.num_pages }}">last &raquo;</a>-->
-                  {% endif %}
-              <!-- </span> -->
-          <!-- </div> -->
+                  <a class="button2" href="?page={{ questions.next_page_number }}">
+  <button type="button" class="btn btn-primary float-right">Save & Next</button>
+</a>
+{% endif %}
+</div>
 
-      
 
-      </div>
-<!--      <div class="button">-->
-<!--        <button type="button" class="btn btn-primary">Next</button>-->
-<!--      </div>-->
-      </div>
-  </div>
+        </div>
+   </div>
 
+
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+             
 </body>
 </html>
