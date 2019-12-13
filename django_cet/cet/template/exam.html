@@ -42,17 +42,16 @@
         .container3 {
 
           margin-top: 100px;
-         px
         }
 
         .time {
         margin-top: 10px;
         position: relative;
         float: right;
-        margin-right: 320px;
+        margin-right: 60px;
         }
 
-        .btn1.btn-sm{
+        .btn-circle.btn-sm {
             width: 30px;
             height: 30px;
             padding: 6px 0px;
@@ -86,6 +85,24 @@
         margin-left: 20px;
         }
 
+        .selected {
+    background:green
+}
+.scrollbar {
+margin-top: 100px;
+height: 500px;
+width: 400px;
+background: #fff;
+overflow-y: scroll;
+margin-bottom: 25px;
+}
+.force-overflow {
+min-height: 450px;
+}
+
+.scrollbar-primary::-webkit-scrollbar {
+width: 12px;
+background-color: #F5F5F5; }
 
     </style>
 </head>
@@ -107,6 +124,8 @@
 
 <div class="time">
     <h5>Time Remaining:</h5>
+    <div class="scrollbar scrollbar-primary">
+  <div class="force-overflow">
     <div class="container3">
                 <div class="phy">
                     <h5>Physics</h5>
@@ -114,8 +133,16 @@
                     <hr>
 
                     <div class="btn1">
-                <button type="button" class="btn btn-secondary btn-circle btn-sm">1</button>
-                        <button type="button" class="btn btn-secondary btn-circle btn-sm">1</button>
+                {% for n in physics %}
+            <a class="button1" href="?page={{ n }}">
+                <button type="button" class="btn btn-secondary btn-circle btn-sm">{{ n }}</button>
+                {% if n|divisibleby:10 %}
+                <br>
+                <br>
+                {% endif %}
+            </a>
+            {% endfor %}
+
                     </div>
 <br>
                  <div class="chem">
@@ -124,8 +151,16 @@
                     <hr>
 
         <div class="btn1">
-                <button type="button" class="btn btn-secondary btn-circle btn-sm">1</button>
-            <button type="button" class="btn btn-secondary btn-circle btn-sm">1</button>
+            {% for n in chemistry %}
+            <a class="button1" href="?page={{ n }}">
+                <button type="button" class="btn btn-secondary btn-circle btn-sm">{{ n }}</button>
+                {% if n|divisibleby:10 %}
+                <br>
+                <br>
+                {% endif %}
+            </a>
+            {% endfor %}
+
                     </div>
         <br>
                  <div class="math">
@@ -134,11 +169,20 @@
                     <hr>
 
         <div class="btn1">
-                <button type="button" class="btn btn-secondary btn-circle btn-sm">1</button>
-            <button type="button" class="btn btn-secondary btn-circle btn-sm">1</button>
+                 {% for n in maths %}
+            <a class="button1" href="?page={{ n }}">
+                <button type="button" class="btn btn-secondary btn-circle btn-sm">{{ n }}</button>
+                {% if n|divisibleby:10 %}
+                <br>
+                <br>
+                {% endif %}
+            </a>
+            {% endfor %}
+
                     </div>
 
-
+    </div>
+  </div>
             </div>
 </div>
 
@@ -186,20 +230,20 @@
 
         {% endfor %}
 
+             <button type="button" id="invalid" class="btn btn-warning">Invalid</button>
 
-             <button type="button" class="btn btn-warning">Invalid</button>
-          <button type="button" class="btn btn-success">Bookmark</button>
+          <button type="button" id="bookmark" class="btn btn-success">Bookmark</button>
         <br>
                 <div class="nxt_tab">
                   {% if questions.has_previous %}
 
                       <a class="button1" href="?page={{ questions.previous_page_number }}">
-  <button type="button" class="btn btn-primary float-left">Previous</button>
+  <button type="button" id="previous" class="btn btn-primary float-left">Previous</button>
 </a>
 {% endif %}
                   {% if questions.has_next %}
                   <a class="button2" href="?page={{ questions.next_page_number }}">
-  <button type="button" class="btn btn-primary float-right">Save & Next</button>
+  <button type="button" id="next" class="btn btn-primary float-right">Save & Next</button>
 </a>
 {% endif %}
 </div>
@@ -207,7 +251,12 @@
 
         </div>
    </div>
-
+<script>
+    $( "button#invalid" ).click(function() {
+  $(this).toggleClass( "selected" );
+  console.log("Fuck you");
+});
+</script>
 
    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

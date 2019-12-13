@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      {% load staticfiles %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <style>
+        
+  .h{
+    padding: 10px 2px;
+    color: #fff;
+    text-align:right;
+    padding:30px;
+    background-color:#343A40;
+    }
+
+</style>
+    <title>CET-aboutUs</title>
+  </head>
+  <body>
+
+        
+        <nav class="navbar navbar-light bg-dark">
+
+                <img class="d-inline-block align-top" src="{% static 'sinhgad.png' %}" width="100" height="80"  alt="My image"/>
+                
+                <h3 style="color:#fff">Sinhgad Technical Education Society</h3>
+                
+                </nav>
+  
+  
+    <!-- Grey with black text -->
+
+        
+  <!-- Black with white text -->
+
+  
+  <!-- Blue with white text -->
+
+    <!-- <div style="height:5px"></div>
+<div class="container">
+    <div style="border-bottom:solid #343A40 ;">
+    <!-- <h1 style="font-size: 40px;" class="text-center page-header display-1 text-dark">
+            
+        ABOUT US
+    </h1>
+    <hr>
+    </div> --> 
+    <div class="w3-content w3-section" style="margin-top: 0%;">
+            <img class="mySlides w3-animate-fading" src="{% static '1.jpg' %}"height="600px" width="1100px" align="center" style="opacity: 0.2;">
+            <img class="mySlides w3-animate-fading" src="{% static '2.jpg' %}" height="600px" width="1100px" align="center">
+            <img class="mySlides w3-animate-fading" src="{% static '3.jpg' %}" height="600px" width="1100px" align="center">
+            <img class="mySlides w3-animate-fading" src="{% static '4.jpg' %}" height="600px" width="1100px" align="center">
+            <img class="mySlides w3-animate-fading" src="{% static '5.jpg' %}" height="600px" width="1100px" align="center">
+          </div>
+
+
+          
+          <script>
+          var myIndex = 0;
+          carousel();
+          
+          function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 5000);    
+          }
+</script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                
+          
+</body>
+  
+</html>

@@ -29,8 +29,23 @@ def test_page(request):
 
     page = request.GET.get('page')
     myquestion = paginator.get_page(page)
-    return render(request, 'exam.html', {'questions': myquestion})
+
+    physics = []
+    for i in range(1, 51) :
+        physics.append(i)
+
+        chemistry = []
+        for i in range(51, 101):
+            chemistry.append(i)
+
+        maths = []
+        for i in range(101, 151):
+            maths.append(i)
+    return render(request, 'exam.html', {'questions': myquestion, 'physics': physics, 'chemistry': chemistry, 'maths':maths})
 
 
 def instructions(request):
     return render(request, 'instructions.html')
+
+def aboutus(request):
+    return render(request, 'aboutus.html')
